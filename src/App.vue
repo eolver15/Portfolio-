@@ -1,36 +1,78 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-app-bar>
+    <v-container fill height>
+      <v-row justify="center" align="center">
+        <v-col cols="12" class="text-center">
+          <h1 class="display-4">Elizabeth Olvera's Portfolio</h1>
+        </v-col>
+        <v-col cols="12" class="text-center display-1">
+          <p>eolver15@stu.southtexascollege.edu</p>
+        </v-col>
+        <v-col cols="12">
+          <v-container>
+            <v-row justify ="center">
+              <v-col v-for="(project, index) in project" :key="index">
+                <v-card max-width="344" class="mx-auto">
+                  <v-list-item>
+                    <v-list-item-content>
+                      <v-list-item-title class="headline">{{project.name}}</v-list-item-title>
+                    
+                    </v-list-item-content>
+                  </v-list-item>
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+                  <v-img :src="project.screenshoot" height="194"></v-img>
+
+                  <v-card-text>{{project.description}}</v-card-text>
+
+                  <v-card-actions>
+                    <v-btn text color="blue accent-4" :href="project.url" target="_blank">Go to site</v-btn> 
+                    <div class="flex-grow-1"></div>
+                    <v-btn icon>
+                      <v-icon>mdi-share-variant</v-icon>
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  },
+  name: "App",
   data: () => ({
-    //
+    project : [
+      {
+        name: 'Vue Todo Application',
+        description:'A simple to do application who handles completed and pending tasks, it also keeps records of total tasks per bucket.',
+        screenshoot:'images/Vacation Packing List.jpg',
+        url: 'https://todo.eolver15.site',
+      },
+        {
+        name: 'Marvel Finder',
+        description:'Using Marvel Public API, we have a simple character finder application, with character descriptions and some comics where the characters appear.',
+        screenshoot:'images/marvel finder.jpg',
+        url:'https://marvelfinder.eolver15.site',
+      },
+       {
+        name: 'Super Awesome App',
+        description:'The coolest and better Social Network ever created (by me).',
+        screenshoot:'images/super-awesome.jpg',
+        url: 'https://superawesomeapp.eolver15.site',
+      },
+      {
+        name: 'Piano Me',
+        description:'This is a simple piano lesson site. Students will learn online at their own pace.',
+        screenshoot:'images/pmeapp.jpg',
+        url: 'https://pianome.eolver15.site',
+      }
+       
+
+    ]
   })
-}
+};
 </script>
