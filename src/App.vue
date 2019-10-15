@@ -70,9 +70,18 @@ export default {
         screenshot:'/images/pmeapp.JPG',
         url: 'https://pianome.eolver15.site',
       }
-       
-
     ]
-  })
+  }),
+  methods:{
+    async share (project) {
+      if (navigator.share){
+        await navigator.share({
+          title: project.any, 
+          text: project.description,
+          url: project.url
+        })
+      }
+    }
+  }
 };
 </script>
