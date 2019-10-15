@@ -20,7 +20,7 @@
                     </v-list-item-content>
                   </v-list-item>
 
-                  <v-img :src="project.screenshoot" height="194"></v-img>
+                  <v-img :src="project.screenshot" contain height="194"></v-img>
 
                   <v-card-text>{{project.description}}</v-card-text>
 
@@ -49,25 +49,25 @@ export default {
       {
         name: 'Vue Todo Application',
         description:'A simple to do application who handles completed and pending tasks, it also keeps records of total tasks per bucket.',
-        screenshoot:'images/Vacation Packing List.jpg',
+        screenshot:'/images/Vacation Packing List.JPG',
         url: 'https://todo.eolver15.site',
       },
         {
         name: 'Marvel Finder',
         description:'Using Marvel Public API, we have a simple character finder application, with character descriptions and some comics where the characters appear.',
-        screenshoot:'images/marvel finder.jpg',
+        screenshot:'/images/marvel finder.JPG',
         url:'https://marvelfinder.eolver15.site',
       },
        {
         name: 'Super Awesome App',
         description:'The coolest and better Social Network ever created (by me).',
-        screenshoot:'images/super-awesome.jpg',
+        screenshot:'/images/super-awesome.JPG',
         url: 'https://superawesomeapp.eolver15.site',
       },
       {
         name: 'Piano Me',
         description:'This is a simple piano lesson site. Students will learn online at their own pace.',
-        screenshoot:'images/pmeapp.jpg',
+        screenshot:'/images/pmeapp.JPG',
         url: 'https://pianome.eolver15.site',
       }
        
