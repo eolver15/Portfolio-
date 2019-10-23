@@ -49,13 +49,13 @@ export default {
       {
         name: 'Vue Todo Application',
         description:'A simple to do application who handles completed and pending tasks, it also keeps records of total tasks per bucket.',
-        screenshot:'/images/Vacation Packing List.JPG',
+        screenshot:'/images/Vacation Packing List.jpg',
         url: 'https://todo.eolver15.site',
       },
         {
         name: 'Marvel Finder',
         description:'Using Marvel Public API, we have a simple character finder application, with character descriptions and some comics where the characters appear.',
-        screenshot:'/images/Marvel Finder.JPG',
+        screenshot:'/images/Marvel Finder.jpg',
         url:'https://marvelfinder.eolver15.site',
       },
        {
@@ -67,7 +67,7 @@ export default {
       {
         name: 'Piano Me',
         description:'This is a simple piano lesson site. Students will learn online at their own pace.',
-        screenshot:'/images/pmeapp.JPG',
+        screenshot:'/images/pmeapp.jpg',
         url: 'https://pianome.eolver15.site',
       }
     ]
